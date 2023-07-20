@@ -93,13 +93,13 @@ jobs:
         run: west zephyr-export
       
       - name: Testing
-        run: pwd && ls -lash config
+        run: pwd && ls -lash && ls -lash config/
 
-      # - name: overwrite defaults
-      #   run: cp -f config/boards zmk/app/boards/shields/corne/
+      - name: overwrite defaults
+        run: cp -f config/boards zmk/app/boards/shields/corne/
       
-      # - name: check
-      #   run: cat zmk/app/boards/shields/corne/boards/nice_nano_v2.overlay
+      - name: check
+        run: cat zmk/app/boards/shields/corne/boards/nice_nano_v2.overlay
 
       - name: West Build (${{ env.display_name }})
         shell: sh -x {0}
