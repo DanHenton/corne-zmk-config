@@ -96,7 +96,7 @@ jobs:
         run: pwd && ls -lash && ls -lash config/
 
       - name: overwrite defaults
-        run: cp -f config/boards zmk/app/boards/shields/corne/
+        run: cp -rf config/boards zmk/app/boards/shields/corne/
       
       - name: check
         run: cat zmk/app/boards/shields/corne/boards/nice_nano_v2.overlay
